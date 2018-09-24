@@ -1,0 +1,17 @@
+This is a README page for client code.
+
+The client code will take in <hostname> <port_number> and <secret_key> as its argument.
+
+Every time the user enters a valid command (cput, cget, cdelete, clist, quit) with correct argument and argument count, the type of request and secret key will be sent to the server side. 
+
+If the secret_key provided matches the key of server side, it will do what it was requested, and then sends back a feedback response of 0 to a client, -1 if something goes wrong. 
+
+If the secret_key provided does not match the client and server side will automatically shut down.
+
+The client will keep running until user enters quit or hit CTRL+D.
+
+There are several assumptions and here's the list of them.
+(1)File name must not be more than 80 characters long.
+(2)File content size will not be greater than 100KB.
+(3)File name can be any ASCII characater expect \0.
+(4)Secret key will be 4byte unsigned int.
