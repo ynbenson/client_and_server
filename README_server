@@ -1,0 +1,14 @@
+This is a README for server side. 
+
+The server code will take in <port_number> and <secret_key> as its argument.
+
+The server side will always check if the secret key provided will match the secret_key that has been passed as a argument. It they don't match, then server and client will shut down. 
+
+In the case where the secret_key matches, it will perform whatever the request that client has sent, when the request is either one of cput, cget, cdelete, clist, and quit.
+
+When cput is provided with valid filename, server will receive the file from client.
+When cget is provided with valid filename, server will transmit the file to client.
+When cdelete is provided with valie filename, server will delete the file from current directory. 
+When clist is provided, server will transmit the filename of current directory one at a time to client.
+Finally when quit is entered, the server will shut down. 
+
